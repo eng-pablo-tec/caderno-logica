@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Caderno de Estudos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <aside id="sidebar">
+    <h2>Caderno</h2>
+    <ul>
+      <li><button onclick="mostrar('introducao')">📘 Introdução</button></li>
+      <li><button onclick="mostrar('links')">🔗 Links Úteis</button></li>
+      <li><button onclick="mostrar('js1')">🧠 JavaScript Vetor/Matriz</button></li>
+      <li><button onclick="mostrar('logica')">📝 Lógica - Atividades</button></li>
+      <li><button onclick="mostrar('dom')">⚙️ JavaScript DOM</button></li>
+    </ul>
+  </aside>
+
+  <main>
+    <div id="introducao" class="tela">
+      <h1>Introdução</h1>
+      <p>Email: pablo.santos@edu.sc.senai.br</p>
+      <p>Curso Técnico em Desenvolvimento de Sistemas</p>
+      <p>Unidade Curricular: Lógica de Programação, Frontend</p>
+    </div>
+
+    <div id="links" class="tela">
+      <h1>Links Úteis</h1>
+      <ul>
+        <li><a href="https://www.fronteditor.dev/" target="_blank">Front Editor</a></li>
+        <li><a href="https://remove.bg/pt-br" target="_blank">Remove BG</a></li>
+        <li><a href="https://freeimage.host/pt" target="_blank">Free Image Host</a></li>
+        <li><a href="https://pixabay.com/pt/images" target="_blank">Pixabay</a></li>
+      </ul>
+    </div>
+
+    <div id="js1" class="tela">
+      <h1>JavaScript Inicial – Vetores e Matrizes</h1>
+      <pre><code>let alunos = [\"Ana\", \"Bruno\", \"Carlos\"];\nalunos[1];</code></pre>
+
+      <pre><code>let notas = [\n  [8, 9, 7],\n  [6, 8, 9],\n  [10, 9, 10]\n];</code></pre>
+
+      <pre><code>// Somar vetor\nlet numeros = [10, 20, 30];\nlet soma = 0;\nfor(let i=0; i<numeros.length; i++) {\n  soma += numeros[i];\n}\nconsole.log(soma);</code></pre>
+    </div>
+
+    <div id="logica" class="tela">
+      <h1>Atividades de Lógica</h1>
+      <ul>
+        <li><a href="https://eng-pablo-tec.github.io/IDE_javascript/" target="_blank">IDE JavaScript</a></li>
+        <li><a href="https://docs.google.com/forms/d/1UC-5jGSULS47z54VMHSMbxC-ouLt2soJeXtbX4GUW2g/edit" target="_blank">Atividade 1</a></li>
+        <li><a href="https://docs.google.com/forms/d/1piW-5LUGRLnNsY-zl2ExbyWUpnHyfRUpHZrLtLuHy28/edit" target="_blank">Atividade 2</a></li>
+        <!-- continue os links aqui -->
+      </ul>
+    </div>
+
+    <div id="dom" class="tela">
+      <h1>JavaScript DOM</h1>
+      <pre><code>document.getElementById(\"botao\").addEventListener(\"click\", function() {\n  document.getElementById(\"minhaDiv\").className = \"estilo2\";\n});</code></pre>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
