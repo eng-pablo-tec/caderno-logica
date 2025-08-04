@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  background-color: #f4f4f4;
+}
+
+#sidebar {
+  width: 250px;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+}
+
+#sidebar h2 {
+  margin-bottom: 20px;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar button {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  background: #34495e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 4px;
+}
+
+#sidebar button:hover {
+  background: #5d6d7e;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.tela {
+  display: none;
+}
+
+pre {
+  background: #eee;
+  padding: 10px;
+  border-left: 4px solid #ccc;
+  overflow-x: auto;
+}
+
+code {
+  font-family: monospace;
+  font-size: 14px;
+}
