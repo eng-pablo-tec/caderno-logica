@@ -1,90 +1,242 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Caderno de Estudos</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Caderno Front-End - SENAI</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+    }
+
+    #sidebar {
+      width: 250px;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+    }
+
+    #sidebar h2 {
+      margin-bottom: 10px;
+    }
+
+    #sidebar button {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+      padding: 10px;
+      background-color: #34495e;
+      border: none;
+      color: white;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    #sidebar button:hover {
+      background-color: #3d5a73;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .tela {
+      display: none;
+    }
+
+    .ativa {
+      display: block;
+    }
+
+    a {
+      color: #2980b9;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-  <aside id="sidebar">
-    
-    <h2>Caderno</h2>
-    <ul>
-      <li><button onclick="mostrar('revisao')">📚 Revisão Geral</button></li>
 
-      <li><button onclick="mostrar('introducao')">📘 Introdução</button></li>
-      <li><button onclick="mostrar('links')">🔗 Links Úteis</button></li>
-      <li><button onclick="mostrar('js1')">🧠 JavaScript Vetor/Matriz</button></li>
-      <li><button onclick="mostrar('logica')">📝 Lógica - Atividades</button></li>
-      <li><button onclick="mostrar('dom')">⚙️ JavaScript DOM</button></li>
-    </ul>
+  <aside id="sidebar">
+    <h2>Caderno</h2>
+    <button onclick="mostrar('introducao')">📘 Introdução</button>
+    <button onclick="mostrar('links')">🔗 Links Úteis</button>
+    <button onclick="mostrar('htmlcss')">🎨 HTML e CSS</button>
+    <button onclick="mostrar('vetormat')">🧠 Vetor e Matriz</button>
+    <button onclick="mostrar('logica')">📝 Atividades de Lógica</button>
+    <button onclick="mostrar('dom')">⚙️ JavaScript DOM</button>
+    <button onclick="mostrar('revisao')">📚 Revisões</button>
   </aside>
 
   <main>
-    <div id="revisao" class="tela">
-  <h1>📚 Revisão Geral</h1>
+    <div id="introducao" class="tela ativa">
+      <h1>📘 Introdução</h1>
+      <p><strong>Email para entregas:</strong> pablo.santos@edu.sc.senai.br</p>
+      <p><strong>Mundo SENAI:</strong> <a href="https://forms.gle/BPboXdDBkvMnCe4h9" target="_blank">Acessar formulário</a></p>
 
-  <h2>📘 Revisão HTML e CSS</h2>
-  <ul>
-    <li><a href="https://forms.gle/7XCLyY6wTGTUMGvh6" target="_blank">Revisão HTML e CSS (Google Forms)</a></li>
-  </ul>
-
-  <h2>💻 IDE Online JavaScript</h2>
-  <ul>
-    <li><a href="https://eng-pablo-tec.github.io/IDE_javascript/" target="_blank">IDE JavaScript</a></li>
-  </ul>
-
-  <h2>🧠 Revisão de Algoritmos</h2>
-  <ul>
-    <li><a href="https://docs.google.com/forms/d/1UC-5jGSULS47z54VMHSMbxC-ouLt2soJeXtbX4GUW2g/edit" target="_blank">Revisão Algoritmos 1</a></li><br>
-    <li><a href="https://forms.gle/D8By5GdjRvjgN7cs8" target="_blank">Revisão Algoritmos 2</a></li><br>
-    <li><a href="https://forms.gle/3XqRcQqJGLYSwwMZ6" target="_blank">Revisão Algoritmos 3</a></li>
-  </ul>
-</div>
-
-    <div id="introducao" class="tela">
-      <h1>Introdução</h1>
-      <p>Email: pablo.santos@edu.sc.senai.br</p>
-      <p>Curso Técnico em Desenvolvimento de Sistemas</p>
-      <p>Unidade Curricular: Lógica de Programação, Frontend</p>
-    </div>
-
-    <div id="links" class="tela">
-      <h1>Links Úteis</h1>
+      <p>Este caderno foi elaborado para apoiar as atividades práticas em:</p>
       <ul>
-        <li><a href="https://www.fronteditor.dev/" target="_blank">Front Editor</a></li>
-        <li><a href="https://remove.bg/pt-br" target="_blank">Remove BG</a></li>
-        <li><a href="https://freeimage.host/pt" target="_blank">Free Image Host</a></li>
-        <li><a href="https://pixabay.com/pt/images" target="_blank">Pixabay</a></li>
+        <li>Lógica de Programação</li>
+        <li>HTML, CSS e JavaScript</li>
+        <li>Eventos e ferramentas</li>
+      </ul>
+
+      <p>Foco nas habilidades:</p>
+      <ul>
+        <li>Reprodução fiel de layouts</li>
+        <li>Design responsivo e boas práticas</li>
+        <li>Inclusão e experiência do usuário</li>
+        <li>Documentação de decisões criativas</li>
+      </ul>
+
+      <p>Estrutura:</p>
+      <ul>
+        <li>Passo a passo</li>
+        <li>Espaço para imagens</li>
+        <li>Checklists</li>
+        <li>Autoavaliação</li>
+        <li>Entrega final</li>
       </ul>
     </div>
 
-    <div id="js1" class="tela">
-      <h1>JavaScript Inicial – Vetores e Matrizes</h1>
-      <pre><code>let alunos = [\"Ana\", \"Bruno\", \"Carlos\"];\nalunos[1];</code></pre>
+    <div id="links" class="tela">
+      <h1>🔗 Links Úteis</h1>
+      <ul>
+        <li><a href="https://www.fronteditor.dev/" target="_blank">Editor Online - HTML CSS JS</a></li>
+        <li><a href="https://imagecolorpicker.com" target="_blank">Pegar código da cor</a></li>
+        <li><a href="https://remove.bg/pt-br" target="_blank">Remover fundo de imagem</a></li>
+        <li><a href="https://www.insmind.com/pt-br/remover-objetos-de-fotos/" target="_blank">Remover objeto da imagem</a></li>
+        <li><a href="https://freeimage.host/pt" target="_blank">Hospedar imagens gratuitamente</a></li>
+        <li><a href="https://pngimg.com/" target="_blank">PNG Img</a></li>
+        <li><a href="https://pixabay.com/pt/images" target="_blank">Pixabay</a></li>
+        <li><a href="https://www.pexels.com/pt-br" target="_blank">Pexels</a></li>
+        <li><a href="https://br.freepik.com" target="_blank">Freepik</a></li>
+        <li><a href="https://www.designerd.com.br/wp-content/uploads/2021/08/sites-paleta-de-cores-coolors.jpg" target="_blank">Paleta de Cores</a></li>
+      </ul>
+    </div>
 
-      <pre><code>let notas = [\n  [8, 9, 7],\n  [6, 8, 9],\n  [10, 9, 10]\n];</code></pre>
+    <div id="htmlcss" class="tela">
+      <h1>🎨 HTML e CSS</h1>
+      <p><strong>Atividade:</strong> <a href="https://forms.gle/mzu567FSzs2P8Gov5" target="_blank">Dicionário de Sintaxe</a></p>
+      <p><strong>Importar fontes do Google:</strong></p>
+      <pre>@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');</pre>
+      <p><strong>Exemplo de uso no CSS:</strong></p>
+      <pre>body {\n  font-family: 'Roboto', sans-serif;\n}</pre>
 
-      <pre><code>// Somar vetor\nlet numeros = [10, 20, 30];\nlet soma = 0;\nfor(let i=0; i<numeros.length; i++) {\n  soma += numeros[i];\n}\nconsole.log(soma);</code></pre>
+      <p><strong>Referência de sintaxe CSS:</strong></p>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style" target="_blank">CSS Border - MDN</a></li>
+      </ul>
+
+      <p><strong>Exemplos de código CSS:</strong></p>
+      <pre>
+color: red;
+background-color: red;
+font-size: 10px;
+font-weight: bold;
+width: 100px;
+height: 50px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background: none;
+      </pre>
+
+      <p><strong>Formas de usar cores:</strong></p>
+      <ul>
+        <li>Nome da cor: red</li>
+        <li>RGB: rgb(0,0,0)</li>
+        <li>Hex: #040404</li>
+      </ul>
+
+      <p><strong>HTML:</strong></p>
+      <pre>
+&lt;br&gt; → pular linha
+&lt;hr&gt; → linha horizontal
+&lt;link rel=\"stylesheet\" href=\"style.css\"&gt;
+&lt;script src=\"script.js\"&gt;&lt;/script&gt;
+      </pre>
+    </div>
+
+    <div id="vetormat" class="tela">
+      <h1>🧠 Vetores e Matrizes em JavaScript</h1>
+      <p><strong>Vetor:</strong> Lista linear.</p>
+      <pre>let frutas = [\"maçã\", \"banana\", \"uva\"];</pre>
+
+      <p><strong>Matriz:</strong> Tabela (linhas e colunas).</p>
+      <pre>
+let notas = [
+  [8, 9, 7],
+  [6, 8, 9],
+  [10, 9, 10]
+];
+      </pre>
+
+      <p><strong>Somar valores:</strong></p>
+      <pre>
+let numeros = [10, 20, 30];
+let soma = 0;
+for(let i = 0; i < numeros.length; i++) {
+  soma += numeros[i];
+}
+      </pre>
     </div>
 
     <div id="logica" class="tela">
-      <h1>Atividades de Lógica</h1>
+      <h1>📝 Atividades de Lógica</h1>
+      <p><strong>IDE JavaScript:</strong> <a href=\"https://eng-pablo-tec.github.io/IDE_javascript/\" target=\"_blank\">Acessar</a></p>
       <ul>
-        <li><a href="https://eng-pablo-tec.github.io/IDE_javascript/" target="_blank">IDE JavaScript</a></li>
-        <li><a href="https://docs.google.com/forms/d/1UC-5jGSULS47z54VMHSMbxC-ouLt2soJeXtbX4GUW2g/edit" target="_blank">Atividade 1</a></li>
-        <li><a href="https://docs.google.com/forms/d/1piW-5LUGRLnNsY-zl2ExbyWUpnHyfRUpHZrLtLuHy28/edit" target="_blank">Atividade 2</a></li>
-        <!-- continue os links aqui -->
+        <li><a href=\"https://docs.google.com/forms/d/1UC-5jGSULS47z54VMHSMbxC-ouLt2soJeXtbX4GUW2g/edit\" target=\"_blank\">Atividade 1</a></li>
+        <li><a href=\"https://docs.google.com/forms/d/1piW-5LUGRLnNsY-zl2ExbyWUpnHyfRUpHZrLtLuHy28/edit\" target=\"_blank\">Atividade 2</a></li>
+        <li><a href=\"https://docs.google.com/forms/d/1tUGfk5yooueqOinkOv7DSz_FJ-ZSlHy6TtDRvxdDC-0/edit\" target=\"_blank\">Atividade 3</a></li>
+        <li><a href=\"https://docs.google.com/forms/d/1sxVQislLvleWdOxIsccYBNeYMhu7BkzsG8Hx_atrsHQ/edit\" target=\"_blank\">Atividade 4</a></li>
+        <li><a href=\"https://docs.google.com/forms/d/1uZRs-SpfEBJGJJITVH9Z7f4zY6Cly11h3wAFMe9IoSg/edit\" target=\"_blank\">Atividade 5</a></li>
+        <li><a href=\"https://docs.google.com/forms/d/1_q_DYaswRPX9DyPtPrWEo3ISu_VKYJ2qqUooI-yf9BU/edit\" target=\"_blank\">Atividade 6</a></li>
+        <li><a href=\"https://docs.google.com/forms/d/1aW49C-sVNoyHDS_tuTxTiaS2oShKLTLWLISpLZd3QVI/edit\" target=\"_blank\">Atividade 7</a></li>
       </ul>
     </div>
 
     <div id="dom" class="tela">
-      <h1>JavaScript DOM</h1>
-      <pre><code>document.getElementById(\"botao\").addEventListener(\"click\", function() {\n  document.getElementById(\"minhaDiv\").className = \"estilo2\";\n});</code></pre>
+      <h1>⚙️ JavaScript DOM</h1>
+      <p>Está em produção. Me avise se quiser que eu integre os exemplos agora.</p>
+    </div>
+
+    <div id="revisao" class="tela">
+      <h1>📚 Revisão Geral</h1>
+      <ul>
+        <li><a href=\"https://forms.gle/7XCLyY6wTGTUMGvh6\" target=\"_blank\">Revisão HTML e CSS</a></li>
+        <li><a href=\"https://docs.google.com/forms/d/1UC-5jGSULS47z54VMHSMbxC-ouLt2soJeXtbX4GUW2g/edit\" target=\"_blank\">Revisão Algoritmos 1</a></li>
+        <li><a href=\"https://forms.gle/D8By5GdjRvjgN7cs8\" target=\"_blank\">Revisão Algoritmos 2</a></li>
+        <li><a href=\"https://forms.gle/3XqRcQqJGLYSwwMZ6\" target=\"_blank\">Revisão Algoritmos 3</a></li>
+        <li><a href=\"https://eng-pablo-tec.github.io/IDE_javascript/\" target=\"_blank\">IDE JavaScript</a></li>
+      </ul>
     </div>
   </main>
 
-  <script src="script.js"></script>
+  <script>
+    function mostrar(id) {
+      document.querySelectorAll('.tela').forEach(tela => {
+        tela.classList.remove('ativa');
+      });
+      document.getElementById(id).classList.add('ativa');
+    }
+  </script>
+
 </body>
 </html>
