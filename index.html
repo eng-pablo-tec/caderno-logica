@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css">
   <title>Caderno de Atividades</title>
   <!-- Link externo para CSS poderá ser adicionado aqui -->
 </head>
@@ -16,6 +15,13 @@
         <li><button id="topic-revisao" aria-controls="content" aria-expanded="false" type="button">Revisão para Prova</button></li>
         <li><button id="topic-linkapoio" aria-controls="content" aria-expanded="false" type="button">Link de Apoio</button></li>
         <li><button id="topic-htmlcss" aria-controls="content" aria-expanded="false" type="button">HTML CSS</button></li>
+      <li><button id="vetor-matriz" aria-current="page" type="button">Vetor e Matrizes</button></li>
+        <li><button id="topic-js0" aria-current="page" type="button">JavaScript 0 - Inicial</button></li>
+        <li><button id="topic-js1" type="button">JavaScript 1 - Lógica</button></li>
+        <li><button id="topic-js2" type="button">JavaScript 2 - DOM</button></li>
+        <li><button id="topic-js3" type="button">JavaScript 3 - Eventos</button></li>
+        <li><button id="topic-js4" type="button">JavaScript 4 - foreach</button></li>
+        <li><button id="topic-js5" type="button">JavaScript 5 - Fetch</button></li>
       </ul>
     </nav>
   </aside>
@@ -241,6 +247,421 @@ body {
               <pre>&lt;script src="script.js"&gt;&lt;/script&gt;</pre>
             `;
             break;
+
+ case 'vetor-matriz':
+            contentEl.innerHTML = `
+              <h1>JavaScript 0 - Inicial</h1>
+
+    <h2>1. TEORIA (super simples)</h2>
+    <h3>Vetor (Array 1D)</h3>
+    <p>É uma lista de coisas. Exemplo: uma fila de alunos.</p>
+    <pre><code>let alunos = ["Ana", "Bruno", "Carlos"];
+alunos[1]</code></pre>
+
+    <h3>Matriz (Array 2D)</h3>
+    <p>É uma tabela com linhas e colunas. Exemplo: notas de alunos em 3 provas.</p>
+    <pre><code>let notas = [
+  [8, 9, 7],     // Ana
+  [6, 8, 9],     // Bruno
+  [10, 9, 10]    // Carlos
+];</code></pre>
+
+    <h2>2. APLICAÇÃO COM EXEMPLOS</h2>
+
+    <h3>Exemplo 1 – Vetor simples</h3>
+    <pre><code>let frutas = ["maçã", "banana", "uva"];
+console.log(frutas[2]); // mostra "uva"</code></pre>
+
+    <h3>Exemplo 2 – Matriz simples</h3>
+    
+    <pre><code>let itens = [
+  [1, 2],
+  [3, 4]
+];
+console.log(itens[1][0]); // mostra 3 (linha 1, coluna 0)</code></pre>
+
+    <h3>Exemplo 3 – Somar valores de um vetor</h3>
+    <pre><code>let numeros = [10, 20, 30];
+let soma = 0;
+
+for(let i = 0; i &lt; numeros.length; i++) {
+  soma = soma  + numeros[i];
+}
+console.log("Soma:", soma); // 60</code></pre>
+
+    <h3>Exemplo 4 – Mostrar todos os valores de uma matriz</h3>
+    <pre><code>let matriz = [
+  [1, 2],
+  [3, 4]
+];
+
+for(let i = 0; i &lt; matriz.length; i++) {
+  for(let j = 0; j &lt; matriz[i].length; j++) {
+    console.log(matriz[i][j]);
+  }
+}</code></pre>
+
+    <h3>Exemplo 5 – Criar matriz 3x3 com números aleatórios</h3>
+    <pre><code>let matriz = [];
+
+for(let i = 0; i &lt; 3; i++) {
+  let linha = [];
+  for(let j = 0; j &lt; 3; j++) {
+    linha.push(Math.floor(Math.random() * 10)); // de 0 a 9
+  }
+  matriz.push(linha);
+}
+
+console.log(matriz);</code></pre>
+h2>3. DIFERENÇA ENTRE VETOR E MATRIZ</h2>
+    <table border="1" cellspacing="0" cellpadding="5">
+      <thead>
+        <tr>
+          <th>Conceito</th>
+          <th>Vetor (Array 1D)</th>
+          <th>Matriz (Array 2D)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Forma</td>
+          <td>Lista linear</td>
+          <td>Tabela (linhas x colunas)</td>
+        </tr>
+        <tr>
+          <td>Exemplo</td>
+          <td><code>[1, 2, 3]</code></td>
+          <td><code>[[1,2], [3,4]]</code></td>
+        </tr>
+        <tr>
+          <td>Acesso</td>
+          <td><code>vetor[1]</code></td>
+          <td><code>matriz[1][0]</code></td>
+        </tr>
+      </tbody>
+    </table>
+            `;
+            break;
+
+      case 'topic-js0':
+            contentEl.innerHTML = `
+               <h1>JavaScript 0 - Inicial</h1>
+
+            <h2>1. TEORIA (super simples)</h2>
+            <h3>Vetor (Array 1D)</h3>
+            <p>É uma lista de coisas. Exemplo: uma fila de alunos.</p>
+            <pre><code>let alunos = ["Ana", "Bruno", "Carlos"];
+alunos[1]</code></pre>
+
+            <h3>Matriz (Array 2D)</h3>
+            <p>É uma tabela com linhas e colunas. Exemplo: notas de alunos em 3 provas.</p>
+            <pre><code>let notas = [
+  [8, 9, 7],     // Ana
+  [6, 8, 9],     // Bruno
+  [10, 9, 10]    // Carlos
+];</code></pre>
+
+            <h2>2. APLICAÇÃO COM EXEMPLOS</h2>
+
+            <h3>Exemplo 1 – Vetor simples</h3>
+            <pre><code>let frutas = ["maçã", "banana", "uva"];
+console.log(frutas[2]); // mostra "uva"</code></pre>
+
+            <h3>Exemplo 2 – Matriz simples</h3>
+            <pre><code>let itens = [
+  [1, 2],
+  [3, 4]
+];
+console.log(itens[1][0]); // mostra 3 (linha 1, coluna 0)</code></pre>
+
+            <h3>Exemplo 3 – Somar valores de um vetor</h3>
+            <pre><code>let numeros = [10, 20, 30];
+let soma = 0;
+
+for(let i = 0; i &lt; numeros.length; i++) {
+  soma = soma  + numeros[i];
+}
+console.log("Soma:", soma); // 60</code></pre>
+
+            <h3>Exemplo 4 – Mostrar todos os valores de uma matriz</h3>
+            <pre><code>let matriz = [
+  [1, 2],
+  [3, 4]
+];
+
+for(let i = 0; i &lt; matriz.length; i++) {
+  for(let j = 0; j &lt; matriz[i].length; j++) {
+    console.log(matriz[i][j]);
+  }
+}</code></pre>
+
+            <h3>Exemplo 5 – Criar matriz 3x3 com números aleatórios</h3>
+            <pre><code>let matriz = [];
+
+for(let i = 0; i &lt; 3; i++) {
+  let linha = [];
+  for(let j = 0; j &lt; 3; j++) {
+    linha.push(Math.floor(Math.random() * 10)); // de 0 a 9
+  }
+  matriz.push(linha);
+}
+
+console.log(matriz);</code></pre>
+
+            <h2>3. DIFERENÇA ENTRE VETOR E MATRIZ</h2>
+            <table border="1" cellspacing="0" cellpadding="5">
+              <thead>
+                <tr>
+                  <th>Conceito</th>
+                  <th>Vetor (Array 1D)</th>
+                  <th>Matriz (Array 2D)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Forma</td>
+                  <td>Lista linear</td>
+                  <td>Tabela (linhas x colunas)</td>
+                </tr>
+                <tr>
+                  <td>Exemplo</td>
+                  <td><code>[1, 2, 3]</code></td>
+                  <td><code>[[1,2], [3,4]]</code></td>
+                </tr>
+                <tr>
+                  <td>Acesso</td>
+                  <td><code>vetor[1]</code></td>
+                  <td><code>matriz[1][0]</code></td>
+                </tr>
+              </tbody>
+            </table>
+
+
+           `;
+            break;
+            
+             case 'topic-js1':
+            content.innerHTML = `
+              <h1>JavaScript 1 - Lógica</h1>
+              <p>Atividades Lógica</p>
+
+              <p><strong>IDE JAVASCRIPT -</strong> Editor de Código Online somente de Javascript para Atividades de Algoritmos:</p>
+              <p><a href="https://eng-pablo-tec.github.io/IDE_javascript/" target="_blank" rel="noopener noreferrer">https://eng-pablo-tec.github.io/IDE_javascript/</a></p>
+
+              <p><strong>Cadernos de Atividade Javascript</strong></p>
+              <ul>
+                <li><a href="https://docs.google.com/forms/d/1UC-5jGSULS47z54VMHSMbxC-ouLt2soJeXtbX4GUW2g/edit" target="_blank" rel="noopener noreferrer">Atividade 1</a></li>
+                <li><a href="https://docs.google.com/forms/d/1piW-5LUGRLnNsY-zl2ExbyWUpnHyfRUpHZrLtLuHy28/edit" target="_blank" rel="noopener noreferrer">Atividade 2</a></li>
+                <li><a href="https://docs.google.com/forms/d/1tUGfk5yooueqOinkOv7DSz_FJ-ZSlHy6TtDRvxdDC-0/edit" target="_blank" rel="noopener noreferrer">Atividade 3</a></li>
+                <li><a href="https://docs.google.com/forms/d/1sxVQislLvleWdOxIsccYBNeYMhu7BkzsG8Hx_atrsHQ/edit" target="_blank" rel="noopener noreferrer">Atividade 4</a></li>
+                <li><a href="https://docs.google.com/forms/d/1uZRs-SpfEBJGJJITVH9Z7f4zY6Cly11h3wAFMe9IoSg/edit" target="_blank" rel="noopener noreferrer">Atividade 5</a></li>
+                <li><a href="https://docs.google.com/forms/d/1_q_DYaswRPX9DyPtPrWEo3ISu_VKYJ2qqUooI-yf9BU/edit" target="_blank" rel="noopener noreferrer">Atividade 6</a></li>
+                <li><a href="https://docs.google.com/forms/d/1aW49C-sVNoyHDS_tuTxTiaS2oShKLTLWLISpLZd3QVI/edit" target="_blank" rel="noopener noreferrer">Atividade 7</a></li>
+              </ul>
+            `;
+          break;
+          
+            case 'topic-js2':
+            content.innerHTML = `
+              <h1>JavaScript 2 - DOM</h1>
+
+              <h2>1 - Mudar uma classe CSS de um elemento</h2>
+              <p><strong>HTML</strong></p>
+              <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;
+
+&lt;div id="minhaDiv" class="estilo1"&gt;Olá&lt;/div&gt;
+&lt;button id="botao"&gt;Trocar&lt;/button&gt;
+
+&lt;script src="script.js"&gt;&lt;/script&gt;
+              </code></pre>
+
+              <p><strong>CSS</strong></p>
+              <pre><code>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.estilo1 {
+  background: red;
+}
+.estilo2 {
+  background: blue;
+}
+</code></pre>
+
+              <p><strong>JAVASCRIPT</strong></p>
+              <pre><code>document.getElementById("botao").addEventListener("click", function() {
+  document.getElementById("minhaDiv").className = "estilo2";
+});</code></pre>
+
+              <h2>2 - Manipular Elementos Nível 1</h2>
+              <p><strong>HTML</strong></p>
+              <pre><code>&lt;div class="tela1"&gt;
+  &lt;button id="azul"&gt;Azul&lt;/button&gt;
+  &lt;button id="verde"&gt;Verde&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="tela2"&gt;
+  &lt;button id="vermelho1"&gt;vermelho&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="tela3"&gt;
+  &lt;button id="vermelho2"&gt;vermelho&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+
+              <p><strong>CSS</strong></p>
+              <pre><code>.tela1 {
+  background-color: red;
+  height: 100px;
+  width: 100px;
+}
+.tela2 {
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+  display: none;
+}
+.tela3 {
+  background-color: green;
+  height: 100px;
+  width: 100px;
+  display: none;
+}
+</code></pre>
+
+              <p><strong>JAVASCRIPT</strong></p>
+              <pre><code>const tela1 = document.querySelector('.tela1');
+const tela2 = document.querySelector('.tela2');
+const tela3 = document.querySelector('.tela3');
+
+document.getElementById('azul').onclick = function () {
+  tela1.style.display = 'none';
+  tela2.style.display = 'inline-block';
+  tela3.style.display = 'none';
+};
+
+document.getElementById('verde').onclick = function () {
+  tela1.style.display = 'none';
+  tela2.style.display = 'none';
+  tela3.style.display = 'inline-block';
+};
+
+document.getElementById('vermelho1').onclick = function () {
+  tela1.style.display = 'inline-block';
+  tela2.style.display = 'none';
+  tela3.style.display = 'none';
+};
+
+document.getElementById('vermelho2').onclick = function () {
+  tela1.style.display = 'inline-block';
+  tela2.style.display = 'none';
+  tela3.style.display = 'none';
+};</code></pre>
+
+              <h2>3 - Criar Elemento com CSS e Texto</h2>
+              <p><strong>HTML</strong></p>
+              <pre><code>&lt;button id="botaoCriar"&gt;Criar Div&lt;/button&gt;
+              </code></pre>
+
+              <p><strong>JAVASCRIPT</strong></p>
+              <pre><code>// A função que cria a div
+function criarMinhaDiv() {
+  const novaDiv = document.createElement("div"); // cria a div
+  novaDiv.className = "minhaClasse";             // define a classe
+  novaDiv.id = "minhaDivCriada";                  // define o id
+  novaDiv.style.color = "red";                    // cor do texto
+  novaDiv.style.backgroundColor = "yellow";      // cor de fundo
+  novaDiv.innerText = "Essa div foi criada com JS!"; // conteúdo de texto
+  document.body.appendChild(novaDiv);             // coloca na página
+}
+
+// Quando clicar no botão, chama a função
+document.getElementById("botaoCriar").addEventListener("click", criarMinhaDiv);
+              </code></pre>
+
+              <h2>4 - Criar Elemento com Loop, atribuir css</h2>
+              <p><strong>HTML</strong></p>
+              <pre><code>&lt;button id="botaoGerar"&gt;Gerar Lista&lt;/button&gt;
+              </code></pre>
+
+              <p><strong>JAVASCRIPT</strong></p>
+              <pre><code>// Lista com 10 nomes
+const nomes = [
+  "Ana", "Bruno", "Carlos", "Daniela", "Eduardo",
+  "Fernanda", "Gabriel", "Helena", "Igor", "Julia"
+];
+
+// Quando clicar no botão, chama a função
+document.getElementById("botaoGerar").addEventListener("click", gerarLista);
+
+// Função que cria as caixinhas para cada nome
+function gerarLista() {
+  for (let i = 0; i < nomes.length; i++) {
+    const divNome = document.createElement("div"); // cria a div
+    divNome.innerText = nomes[i];                  // coloca o nome dentro
+
+    // Estilo direto no JavaScript
+    divNome.style.color = "red";                    // texto vermelho
+    divNome.style.border = "1px solid black";       // borda da caixinha
+    divNome.style.padding = "10px";                  // espaço interno
+    divNome.style.margin = "5px 0";                  // espaço entre caixinhas
+    divNome.style.width = "200px
+    divNome.style.borderRadius = "5px";            // borda arredondada
+    divNome.style.boxShadow = "2px 2px 5px #888";  // sombrazinha
+    divNome.style.backgroundColor = "#fff5f5";     // fundo levemente rosado
+    divNome.style.fontFamily = "Arial";            // fonte padrão
+
+    // Coloca a caixinha no corpo da página
+    document.body.appendChild(divNome);
+  }
+}
+              </code></pre>
+
+              <h2>5 - TO DO - Lista de Tarefas</h2>
+              <p><strong>HTML</strong></p>
+              <pre><code>&lt;input type="text" id="inputTarefa" placeholder="Digite uma tarefa"&gt;
+&lt;button id="botaoAdicionar"&gt;Adicionar Tarefa&lt;/button&gt;
+
+<!-- Onde as tarefas vão aparecer -->
+&lt;div id="listaTarefas"&gt;&lt;/div&gt;
+              </code></pre>
+
+              <p><strong>CSS Sugerido para .tarefaItem</strong></p>
+              <pre><code>.tarefaItem {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px;
+  margin: 5px 0;
+  border-left: 4px solid green;
+  font-family: Arial, sans-serif;
+  border-radius: 4px;
+}
+              </code></pre>
+
+              <p><strong>JAVASCRIPT</strong></p>
+              <pre><code>// Quando clicar no botão, executa a função
+document.getElementById("botaoAdicionar").addEventListener("click", function() {
+  const input = document.getElementById("inputTarefa");
+  const texto = input.value.trim(); // pega o texto e tira espaços
+
+  if (texto !== "") {
+    const novaTarefa = document.createElement("div"); // cria a div
+    novaTarefa.className = "tarefaItem";              // adiciona a classe
+    novaTarefa.innerText = texto;                     // coloca o texto
+
+    document.getElementById("listaTarefas").appendChild(novaTarefa); // adiciona na tela
+    input.value = ""; // limpa o campo depois
+  }
+});
+              </code></pre>
+
+              <h2>Atividade do dia</h2>
+              <p>Aprendemos 5 conceitos aqui.<br />
+              Faça 4 projetos para cada conceito.<br />
+              Consequentemente, 20 projetos.</p>
+              <p><a href="https://forms.gle/BFdUo9urF8iZkfu46" target="_blank" rel="noopener noreferrer">Formulário da Atividade</a></p>
+            `;
+          break;
 
           default:
             contentEl.innerHTML = `<p>Conteúdo não disponível.</p>`;
